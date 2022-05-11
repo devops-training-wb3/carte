@@ -27,6 +27,6 @@ jobs:
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
     - name: tag
-      run: docker tag carte ${{ secrets.DOCKER_USERNAME }}/carte:$(date +%s)
+      run: docker tag carte ${{ secrets.DOCKER_USERNAME }}/carte:v1
     - name: push
-      run : docker push ${{ secrets.DOCKER_USERNAME }}/carte
+      run : docker push ${{ secrets.DOCKER_USERNAME }}/carte:v1
