@@ -18,5 +18,8 @@ jobs:
     - name : compiler
       run : javac carte.java
 
+    - name: tester
+      run: ls
+
     - name : executer
-      run : java ./carte
+      run : java carte
