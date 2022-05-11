@@ -1,9 +1,8 @@
 name: intgration en continue du carte
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    
   
 
 jobs:

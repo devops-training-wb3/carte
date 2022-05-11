@@ -5,12 +5,9 @@ on:
     branches:
       - main
 
-concurrency: main-promotion-pipeline
-
-
 
 jobs:
-  compiler:
+  deploy:
 
     runs-on: ubuntu-latest
   
@@ -18,4 +15,7 @@ jobs:
     steps:
 
     - name : deploiement 
-      run : echo "deploy"
+      run : docker push mkhatiri/carte:v1
+
+    - name: run 
+      run: docker run carte
