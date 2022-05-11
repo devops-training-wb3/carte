@@ -5,6 +5,7 @@ on:
     branches:
       - main
 
+concurrency: main-promotion-pipeline
 
 
 
