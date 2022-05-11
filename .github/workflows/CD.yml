@@ -15,7 +15,7 @@ jobs:
     steps:
 
     - name : deploiement 
-      run : docker push mkhatiri/carte:v1
+      run : docker pull mkhatiri/carte:v1
 
     - name: run 
       run: docker run carte
