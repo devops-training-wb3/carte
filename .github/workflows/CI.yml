@@ -19,7 +19,16 @@ jobs:
       run : docker build -t carte .
 
     - name: tester
-      run: docker image ls
+      run: |
+        docker image ls
+        docker run carte
 
-    - name : executer
-      run : docker run carte
+    - name: docker login
+      run: 
+        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: tag
+      run: docker tag carte ${{ secrets.DOCKER_USERNAME }}/carte:v1
+
+    - name: push
+      run : docker push ${{ secrets.DOCKER_USERNAME }}/carte
