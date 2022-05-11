@@ -1,0 +1,20 @@
+name: deploiement en continue du carte
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: main-promotion-pipeline
+
+
+jobs:
+  compiler:
+
+    runs-on: ubuntu-latest
+  
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name : deploiement
