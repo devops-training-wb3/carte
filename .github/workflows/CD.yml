@@ -22,4 +22,4 @@ jobs:
       run : docker pull mkhatiri/carte:v1
 
     - name: run 
-      run: docker run carte:v1
+      run: docker run mkhatiri/carte:v1
