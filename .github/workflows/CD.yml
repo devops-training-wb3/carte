@@ -5,7 +5,7 @@ on:
     branches:
       - main
 
-concurrency: main-promotion-pipeline
+
 
 
 jobs:
@@ -15,6 +15,6 @@ jobs:
   
 
     steps:
-    - uses: actions/checkout@v3
 
-    - name : deploiement
+    - name : deploiement 
+      run : echo "deploy"
