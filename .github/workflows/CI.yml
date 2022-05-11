@@ -28,6 +28,5 @@ jobs:
 
     - name: tag
       run: docker tag carte ${{ secrets.DOCKER_USERNAME }}/carte:v1
-
     - name: push
       run : docker push ${{ secrets.DOCKER_USERNAME }}/carte:v1
